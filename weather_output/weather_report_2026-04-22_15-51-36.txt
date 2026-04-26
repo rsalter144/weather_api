@@ -1,0 +1,24 @@
+Weather Report for Phoenix, Arizona, United States
+Generated: 2026-04-22 03:51:36 PM
+
+Current Conditions
+------------------
+Time: 2026-04-22T15:45
+Temperature: 86.1°F
+Feels Like: 79.1°F
+Humidity: 15%
+
+Today's Forecast
+----------------
+Conditions: Overcast
+High: 86.7°F
+Low: 68.5°F
+Precipitation: 0.0
+
+Next Few Days
+-------------
+2026-04-22: Overcast, High 86.7°F, Low 68.5°F, Precip 0.0
+2026-04-23: Overcast, High 85.5°F, Low 58.0°F, Precip 0.0
+2026-04-24: Overcast, High 88.8°F, Low 56.8°F, Precip 0.0
+2026-04-25: Overcast, High 82.3°F, Low 70.1°F, Precip 0.0
+2026-04-26: Overcast, High 77.1°F, Low 61.4°F, Precip 0.0

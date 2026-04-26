@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Robert's Weather Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css?v=99">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Robert's Weather Dashboard Testing git</h1>
+        <p>Live weather for Vail / Tucson area</p>
+    </div>
+
+    <div class="dashboard">
+        <div class="card">
+            <div class="label">Temperature</div>
+            <div class="value">{{ temperature }}&deg;F</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Humidity</div>
+            <div class="value">{{ humidity }}%</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Data provided by Open-Meteo
+    </div>
+
+</body>
+</html>

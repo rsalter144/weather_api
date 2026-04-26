@@ -1,0 +1,53 @@
+/* Reset & base */
+body {
+    font-family: Arial, sans-serif;
+    background: #eef3f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    background: #2f5d7c;
+    color: white;
+    padding: 30px;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+    background: white;
+    width: 240px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Text styling */
+.label {
+    font-size: 18px;
+    color: #555;
+}
+
+.value {
+    font-size: 42px;
+    font-weight: bold;
+    color: #2f5d7c;
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    color: #666;
+    font-size: 14px;
+}
