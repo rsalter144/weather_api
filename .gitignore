@@ -1,0 +1,17 @@
+# Virtual environment
+myenv/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data files
+*.csv
+
+# Generated output
+weather_output/
+reports/
+
+# OS files
+.DS_Store
