@@ -1,53 +1,91 @@
-/* Reset & base */
 body {
-    font-family: Arial, sans-serif;
-    background: #eef3f8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     margin: 0;
-    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-/* Header */
-.header {
-    background: #2f5d7c;
-    color: white;
-    padding: 30px;
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
 }
 
-/* Dashboard layout */
-.dashboard {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+p {
+    font-size: 22px;
+    margin: 10px 0;
 }
 
-/* Cards */
-.card {
-    background: white;
-    width: 240px;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.current-box {
+    margin: 25px 0;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 12px;
 }
 
-/* Text styling */
 .label {
     font-size: 18px;
     color: #555;
+    margin-bottom: 5px;
 }
 
-.value {
-    font-size: 42px;
+.big-temp {
+    font-size: 64px;
     font-weight: bold;
-    color: #2f5d7c;
-    margin-top: 10px;
+    color: #007aff;
+    margin: 0;
 }
 
-/* Footer */
-.footer {
-    margin-top: 40px;
+.details {
+    margin-top: 20px;
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.feels-like {
+    font-size: 18px;
     color: #666;
-    font-size: 14px;
+}
+
+.hot {
+    color: #ff3b30;
+}
+
+.warm {
+    color: #ff9500;
+}
+
+.cool {
+    color: #007aff;
+}
+
+.forecast {
+    margin-top: 30px;
+}
+
+.forecast-day {
+    display: inline-block;
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 120px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-icon {
+    font-size: 28px;
+    margin: 5px 0;
 }

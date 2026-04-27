@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Robert's Weather Dashboard</title>
-    <link rel="stylesheet" href="/static/style.css?v=99">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
+
 <body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
 
-    <div class="header">
-        <h1>Robert's Weather Dashboard Testing git</h1>
-        <p>Live weather for Vail / Tucson area</p>
-    </div>
-
-    <div class="dashboard">
-        <div class="card">
-            <div class="label">Temperature</div>
-            <div class="value">{{ temperature }}&deg;F</div>
+        <div class="current-box">
+            <p class="icon">{{ weather.icon }}</p>
+            <p class="big-temp {{ weather.temp_class }}">{{ weather.current_temp }}°F</p>
+            <p class="feels-like">Feels Like: {{ weather.feels_like }}°F</p>
         </div>
 
-        <div class="card">
-            <div class="label">Humidity</div>
-            <div class="value">{{ humidity }}%</div>
+        <div class="details">
+            <p><strong>Date:</strong> {{ weather.date }}</p>
+            <p><strong>High:</strong> {{ weather.temp_max }}°F</p>
+            <p><strong>Low:</strong> {{ weather.temp_min }}°F</p>
+            <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
+        </div>
+
+        <div class="forecast">
+            <h2>Forecast</h2>
+
+            {% for day in forecast %}
+            <div class="forecast-day">
+                <p>{{ day.date }}</p>
+                <p class="forecast-icon">{{ day.icon }}</p>
+                <p>H: {{ day.high }}°</p>
+                <p>L: {{ day.low }}°</p>
+
+            </div>
+            {% endfor %}
         </div>
     </div>
-
-    <div class="footer">
-        Data provided by Open-Meteo
-    </div>
-
 </body>
+
+
 </html>
