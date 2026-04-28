@@ -3,42 +3,56 @@
 
 <head>
     <title>Weather Dashboard</title>
+
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
-
 <body>
     <div class="container">
+
         <h1>Weather Dashboard</h1>
+        <p class="date">{{ today }}</p>
+        <p class="updated">Last Updated: {{ last_updated }}</p>
 
-        <div class="current-box">
-            <p class="icon">{{ weather.icon }}</p>
-            <p class="big-temp {{ weather.temp_class }}">{{ weather.current_temp }}°F</p>
-            <p class="feels-like">Feels Like: {{ weather.feels_like }}°F</p>
+        <div class="card">
+            <h2>Current Weather</h2>
+            <div class="current-temp">{{ current_temp }}°F</div>
+
+            <div class="weather-details">
+                <p>Feels Like: {{ feels_like }}°F</p>
+                <p>Humidity: {{ humidity }}%</p>
+            </div>
         </div>
 
-        <div class="details">
-            <p><strong>Date:</strong> {{ weather.date }}</p>
-            <p><strong>High:</strong> {{ weather.temp_max }}°F</p>
-            <p><strong>Low:</strong> {{ weather.temp_min }}°F</p>
-            <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
-        </div>
+        <h2>3-Day Forecast</h2>
 
         <div class="forecast">
-            <h2>Forecast</h2>
-
             {% for day in forecast %}
-            <div class="forecast-day">
-                <p>{{ day.date }}</p>
-                <p class="forecast-icon">{{ day.icon }}</p>
-                <p>H: {{ day.high }}°</p>
-                <p>L: {{ day.low }}°</p>
-
+            <div class="card forecast-day">
+                <h3>{{ day.date }}</h3>
+                <div class="icon">{{ day.icon }}</div>
+                <p>{{ day.description }}</p>
+                <p>High: {{ day.high }}°F</p>
+                <p>Low: {{ day.low }}°F</p>
             </div>
             {% endfor %}
         </div>
+
+        <h2>Hourly Forecast</h2>
+
+        <div class="hourly">
+            {% for hour in hourly_forecast %}
+            <div class="hour-card">
+                <h3>{{ hour.time }}</h3>
+                <div class="icon">{{ hour.icon }}</div>
+                <p>{{ hour.temp }}°F</p>
+                <p>Rain: {{ hour.precip }}%</p>
+            </div>
+            {% endfor %}
+        </div>
+
     </div>
 </body>
-
 
 </html>
